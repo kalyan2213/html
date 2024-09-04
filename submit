@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <script language="javascript">
+        function cheek(){
+            if(document.f1.t1.value.length==0){
+                alert('please enter user name');
+            }
+        }
+        function first(){
+            if(document.f1.t1.value.length==0){
+                alert('please enter password');
+            }
+            else if(document.f1.t2.value.length<6){
+                alert('the password length should be atleast six')
+            }
+        }
+        function second(){
+            if(document.f1.t3.value!=document.f1.t2.value){
+                alert('the password was not matched');
+                document.f1.t3.value=" ";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="f1">
+        username:
+        <input type="text" name="t1"><br>
+        <br>
+        password:
+        <input type="password" name="t2" onfocus="check()" onblur="first())"><br>
+        <br>
+        re-enter password:
+        <input type="password" name="t3" onchange="second()"><br>
+        <br>
+        <input type="submit" value="submit">
+        <input type="reset" value="clear">
+    </form>
+    
+</body>
+</html>
